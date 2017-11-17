@@ -21,7 +21,8 @@
 
       braintree.hostedFields.create({
         client: clientInstance,
-        fields: settings.hostedFields
+        fields: settings.hostedFields,
+        styles: settings.styles
       }, function (hostedFieldsError, hostedFieldsInstance) {
         that.integration = hostedFieldsInstance;
         if (hostedFieldsError) {
