@@ -72,6 +72,7 @@ class PaymentMethodAddForm extends BasePaymentMethodAddForm {
         'expirationMonth' => ['selector' => '#expiration-month'],
         'expirationYear' => ['selector' => '#expiration-year'],
       ],
+      'styles' => [],
     ];
     $element['#attributes']['class'][] = 'braintree-form';
     // Populated by the JS library.
