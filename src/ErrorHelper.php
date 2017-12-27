@@ -105,7 +105,8 @@ class ErrorHelper {
     }
     elseif ($status == 'gateway_rejected') {
       $reason = $error->gatewayRejectionReason;
-      throw new HardDeclineException('Rejected by the gateway. Reason: ' . $reason);
+      $code   = $error->processorResponseCode;
+      throw new HardDeclineException('Rejected by the gateway. Reason: ' . $reason, $code);
     }
     elseif ($status == 'processor_declined') {
       // https://developers.braintreepayments.com/reference/general/processor-responses/authorization-responses
